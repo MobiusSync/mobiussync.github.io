@@ -11,6 +11,9 @@ ul.jekyllcodex_accordion li input:checked + label::before {transform: rotate(-45
 </style>
 <ul class="jekyllcodex_accordion">
     {% for item in page.accordion %}
+        {% if item.anchor %}
+          <a name="{{ item.anchor | cgi_escape }}"></a>
+        {% endif %}
         <li><input id="accordion{{ forloop.index }}" type="checkbox" /><label for="accordion{{ forloop.index }}">{{ item.title }}</label><div>{{ item.content | markdownify }}</div></li>
     {% endfor %}
 </ul>

@@ -71,7 +71,8 @@ accordion:
 
 
       The Möbius Sync iOS app is not open source at this time.
-  - title: Paying for Möbius Sync
+  - title: Paying for Möbius Sync - unlimited file sync
+    anchor: unlimited-files
     content: >
       **Möbius Sync** can be used free of payment up to total file storage of **20MB**:
 
