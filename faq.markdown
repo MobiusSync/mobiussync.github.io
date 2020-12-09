@@ -96,7 +96,7 @@ accordion:
 
       - Limited **Möbius Sync** usage is available for free.
 
-      - We believe that lack of iOS support has been an impediment to Syncthing vs other competitors, and we hope that offering an (albeit commercial) iOS open will introduce many new users to the Syncthing ecosystem.
+      - We believe that lack of iOS support has been an impediment to Syncthing vs its competitors, and we hope that offering an (albeit commercial) iOS app will introduce many new users to the Syncthing ecosystem.
 
       - We have co-operated with the Syncthing community re naming, use of logo etc via the Syncthing forum, and will continue to do so.
 
