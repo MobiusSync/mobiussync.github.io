@@ -30,7 +30,7 @@ accordion:
 
       3. Photos and videos are not stored as files under iOS. This means you cannot sync photos and videos directly using Syncthing. See *Syncing my photos and videos* for future plans.
   - title: Background sync
-    content: Apple iOS restricts apps from running continuously in the background, but apps can run for short times sporadically. **Möbius Sync** uses various methods to invoke background behaviour, and this is an area to be enhanced over time.
+    content: Apple iOS restricts apps from running continuously in the background, but apps can run for short times sporadically. **Möbius Sync** uses various methods to invoke background behaviour. Minimum interval between quick syncs and power syncs can be configured under Settings, but iOS schedules background activity in an adaptive manner that is not predicatable and sometimes counter-intuitive. It may take 24 hours to start sync but you can expect a total of 1-2h of sync activity per day once stable.
   - title: Accessing my synced files
     content: >
       To access files that have been synced onto your iPhone or iPad from another device:
