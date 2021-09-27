@@ -6,7 +6,7 @@ permalink: /privacy/
 
 **Updated 26-Nov-2020**
 
-The **Möbius Sync** app doesn't collect any data about you. There are no ads and no analytics (other than the standard Apple App store analytics). Syncthing itself is also very privacy and security conscious - see [https://docs.syncthing.net/users/security.html](Syncthing Security Principles).
+The **Möbius Sync** app doesn't collect any data about you. There are no ads and no analytics (other than the standard Apple App store analytics). Syncthing itself is also very privacy and security conscious - see [Syncthing Security Principles](https://docs.syncthing.net/users/security.html).
 
 In future we plan to enable the standard Syncthing anonymous usage report on an opt-in basis. This policy will be updated when that happens.
 
