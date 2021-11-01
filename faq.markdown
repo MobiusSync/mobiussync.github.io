@@ -129,7 +129,7 @@ accordion:
       Syncing between two iOS devices is possible, and will work best when you can open **Möbius Sync** on both device simultaneousy whenever you want them to sync. This is because iOS does not allow us to control when **Möbius Sync** can run in the background, and it is unlikely that two iOS devices will schedule their background activtiy at the same time, in order to be able to sync peer-to-peer.
   - title: Initial setup
     content: >
-      We recommend that you initially setup your non-iOS device(s) with Syncthing, then add your iOS devices. It is probably easiest to initaite new connection(s)/share(s) from the iOS side and accept on the other device(s).
+      We recommend that you initially setup your non-iOS device(s) with Syncthing, then add your iOS devices. It is probably easiest to initaite new connection(s)/share(s) from the iOS side (e.g. using the QR code scanner) and accept on the other device(s).
 
 
       You may need to keep **Möbius Sync** open for a number of minutes while the initial connections and synchronisations are completed.
@@ -155,7 +155,7 @@ accordion:
       - Photo/video library (Send and Receive)
 
 
-      Feedback on what is important to you is most welcome.
+      Feedback on what is important to you is most welcome - preferably by comments at <https://github.com/MobiusSync/MobiusSync/issues>.
   - title: Syncthing features
     content: >
       We have tried to retain and expose via the Settings GUI all of the Syncthing features, except for those we know will not work. This is because we know Syncthing has some very advanced users.
@@ -173,16 +173,13 @@ accordion:
       **Möbius Sync** currently syncs whenever it runs, and by defauly, will use Wifi and/or **ceullular data**. Data usage may of course be high. Cellular Data can be allowed/disallowed for Möbius Sync under the iOS Settings app.
   - title: Support and bug reporting
     content: >
+      Issues and queries can be raised at <https://github.com/MobiusSync/MobiusSync/issues> and <https://github.com/MobiusSync/MobiusSync/discussions>
+
+
       You may discuss Syncthing-releated support issues on <https://forum.syncthing.net/> but do not file **Möbius Sync** queries/issues there.
 
 
-      Issues and queries can be raised at <https://github.com/MobiusSync/MobiusSync/issues>.
-
-
-      In the future we may set up our own forum.
-
-
-      Meanwhile, please see the *Contact us* section below.
+      Please also see the *Contact us* section below.
   - title: How can I help?
     content: >
       If you want to support **Möbius Sync**, you can:
@@ -200,11 +197,11 @@ accordion:
     content: >
       Contact us at:
 
+      - On [Github Discussions](https://github.com/MobiusSync/MobiusSync/discussions).
+
       - On Twitter [@MobiusSync](https://twitter.com/mobiussync)
 
       - On the [Syncthing forum](https://forum.syncthing.net/), but being mindful that the Syncthing open-source community are not obliged to support our commercial product.
-
-      - On IRC Freenode channels [#syncthing](https://kiwiirc.com/client/irc.freenode.net/#syncthing) or [#mobiussync](https://kiwiirc.com/client/irc.freenode.net/#mobiussync).
 
       - Via our company [Pickup Infinity](https://www.pickupinfinity.com/contact).
 ---
