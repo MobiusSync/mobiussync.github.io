@@ -170,7 +170,7 @@ accordion:
       Sync folders under **Möbius Sync** are currently included in your iCloud backup. We hope to make this configurable in future.
   - title: Warning - cellular data usage
     content: >
-      **Möbius Sync** currently syncs whenever it runs, and by default, will use Wifi and/or **ceullular data**. Data usage may of course be high. Cellular Data can be allowed/disallowed for Möbius Sync under the iOS Settings app.
+      **Möbius Sync** currently syncs whenever it runs, and by default, will use Wifi and/or **cellular data**. Data usage may of course be high. Cellular Data can be allowed/disallowed for Möbius Sync under the iOS Settings app.
   - title: Support and bug reporting
     content: >
       Issues and queries can be raised at <https://github.com/MobiusSync/MobiusSync/issues> and <https://github.com/MobiusSync/MobiusSync/discussions>
