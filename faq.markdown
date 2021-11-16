@@ -100,7 +100,7 @@ accordion:
 
       - We have co-operated with the Syncthing community re naming, use of logo etc via the Syncthing forum, and will continue to do so.
 
-      - We plan to contribute back to the Syncthing community when possible, and in method(s) to be decided. You may hold us to account on this.
+      - Our company, Pickup Infinity is a Corporate 🥈 Silver sponsor of the Syncthing project.
 
       - We are amenable to exploring ways to make the **Möbius Sync** source code available to others in a way that does not undermine the commercial incentive to continue support and development.
   - title: Privacy and security
