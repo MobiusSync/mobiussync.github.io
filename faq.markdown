@@ -17,21 +17,23 @@ accordion:
     content: >
       - Avoid paying cloud providers for storage - sync between your own devices directly.
 
-      - Use an open and sync protocol and sync engine, with many advanced features and high configurability.
+      - Use an open and secure protocol and sync engine, with many advanced features and high configurability.
   - title: What can and cannot Möbius Sync do?
     content: >
       **Möbius Sync** can sync files between multiple remote devices and multiple folders. The included Syncthing engine is very powerful and highly configurable.
+
+
+      **Möbius Sync** can sync files in it's own app sandbox as well as (from 1.23.1) *EXPERIMENTAL* support for files in other apps' sandboxes. See *Files in other app's sandboxes*.
+
 
       **Möbius Sync** is restricted by iOS security and performance features in a few ways:
 
       1. No iOS app can run continuously in the background. This means that **Möbius Sync** can only connect to other devices whilst the app is open, for a short time thereafter, and whenever it is triggered to run briefly in the background. See *Background sync*.
 
-      2. iOS apps cannot access each others' files. This means you will need to copy files in and out of Syncthing using the Apple *Files* app. See *Accessing my synced files*.
-
-      3. Photos and videos are not stored as files under iOS. This means you cannot sync photos and videos directly using Syncthing. See *Syncing my photos and videos* for future plans.
+      2. Photos and videos are not stored as files under iOS. This means you cannot sync photos and videos directly using Syncthing. See *Syncing my photos and videos* for future plans.
   - title: Background sync
-    content: Apple iOS restricts apps from running continuously in the background, but apps can run for short times sporadically. **Möbius Sync** uses various methods to invoke background behaviour. Minimum interval between quick syncs and power syncs can be configured under Settings, but iOS schedules background activity in an adaptive manner that is not predicatable and sometimes counter-intuitive. It may take 24 hours to start sync but you can expect a total of 1-2h of sync activity per day once stable.
-  - title: Accessing my synced files
+    content: Apple iOS restricts apps from running continuously in the background, but apps can run for short times sporadically. **Möbius Sync** uses various methods to invoke background behaviour. The minimum interval between quick syncs and power syncs can be configured under Settings, but iOS schedules background activity in an adaptive manner that is not predicatable and sometimes counter-intuitive. It may take 24 hours to start to sync but you can expect a total of 1-2h of sync activity per day once stable.
+  - title: Accessing my files within the Möbius Sync sandbox
     content: >
       To access files that have been synced onto your iPhone or iPad from another device:
 
@@ -56,6 +58,18 @@ accordion:
               - Hit *Save*
 
       For more details on the *Files* app, see: <https://support.apple.com/en-us/HT206481>
+  - title: Syncing files in other apps' sandboxes
+    content: >
+      **This feature is currently EXPERIMENTAL. Please use at your own risk. Please make sure you have backups.**
+
+
+      As of v1.23.1, when adding a sync folder, you can use a *Pick External Folder* to sync a folder within another app's sandbox. You can navigate to choose a folder from any app which supports file storage under *On My iPhone* or *On My iPad*. iCloud is not currently supported.
+
+
+      Beware that as you are are modifying files within another app's sandbox, that app may not behave appropriately, and there is a chance data corrupton or data loss can occur.
+
+
+      We have a thread on Github to discuss successes (and failures?) with particular apps: <https://github.com/MobiusSync/MobiusSync/discussions/102>
   - title: Syncing my photos and videos
     content: >
       Because iOS manages photos and videos within the Photo Library, they are not accessible to Syncthing to synchronise directly as files.
@@ -71,10 +85,22 @@ accordion:
 
 
       The Möbius Sync iOS app is not open source at this time.
+  - title: Möbius Sync and Möbius Sync Pro
+    content: >
+      There are two variants of Möbius Sync now available in the app store. They are identical in terms of functionality, once paid. They merely represent two purchasing methods.
+
+
+      The Pro variant was introduced at the request of corporate customers whose devices are prevented from making in-app purchases.
+
+
+      If in doubt, we recommend you try Möbius Sync (Freemium) to understand how it works within iOS limitations, before paying. See below.
+
+
+      You cannot run both variants at once. If you swap from one to the other, you will have a new Syncthing Device ID, and you will have to recreate your folder configuration.
   - title: Paying for Möbius Sync - unlimited file sync
     anchor: unlimited-files
     content: >
-      **Möbius Sync** can be used free of payment up to total file storage of **20MB**:
+      **Möbius Sync** can be used free of payment up to total file storage of **20MB**, and only for files within the Möbius Sync sandbox:
 
 
       If you exceed this limit, Syncthing will be disabled, giving you two options:
@@ -100,7 +126,7 @@ accordion:
 
       - We have co-operated with the Syncthing community re naming, use of logo etc via the Syncthing forum, and will continue to do so.
 
-      - Our company, Pickup Infinity is a Corporate 🥈 Silver sponsor of the Syncthing project.
+      - Through our company, Pickup Infinity we are a Corporate 🥈 Silver sponsor of the Syncthing project.
 
       - We are amenable to exploring ways to make the **Möbius Sync** source code available to others in a way that does not undermine the commercial incentive to continue support and development.
   - title: Privacy and security
