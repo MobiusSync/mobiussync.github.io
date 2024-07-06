@@ -23,14 +23,13 @@ accordion:
       **Möbius Sync** can sync files between multiple remote devices and multiple folders. The included Syncthing engine is very powerful and highly configurable.
 
 
-      **Möbius Sync** can sync files in it's own app sandbox as well as (from 1.23.1) *EXPERIMENTAL* support for files in other apps' sandboxes. See *Files in other app's sandboxes*.
+      **Möbius Sync** can sync files in its own app sandbox as well as (from 1.23.1) support for files in other apps' sandboxes. See *Syncing files in other apps' sandboxes*.
 
 
-      **Möbius Sync** is restricted by iOS security and performance features in a few ways:
+      **Möbius Sync** has growing support for syncing photo collections (from 1.27.9). Because iOS manages photos and videos within the Photo Library, they are not accessible to Syncthing to synchronise directly as files, custom support has been developed in Möbius Sync. See *Syncing my photos and videos*.
 
-      1. No iOS app can run continuously in the background. This means that **Möbius Sync** can only connect to other devices whilst the app is open, for a short time thereafter, and whenever it is triggered to run briefly in the background. See *Background sync*.
 
-      2. Photos and videos are not stored as files under iOS. This means you cannot sync photos and videos directly using Syncthing. See *Syncing my photos and videos* for future plans.
+      **Möbius Sync** is restricted by iOS security and performance features: No iOS app can run continuously in the background. This means that **Möbius Sync** can only connect to other devices whilst the app is open, for a short time thereafter, and whenever it is triggered to run briefly in the background. See *Background sync*.
   - title: Background sync
     content: Apple iOS restricts apps from running continuously in the background, but apps can run for short times sporadically. **Möbius Sync** uses various methods to invoke background behaviour. The minimum interval between quick syncs and power syncs can be configured under Settings, but iOS schedules background activity in an adaptive manner that is not predicatable and sometimes counter-intuitive. It may take 24 hours to start to sync but you can expect a total of 1-2h of sync activity per day once stable.
   - title: Accessing my files within the Möbius Sync sandbox
@@ -60,25 +59,25 @@ accordion:
       For more details on the *Files* app, see: <https://support.apple.com/en-us/HT206481>
   - title: Syncing files in other apps' sandboxes
     content: >
-      **This feature is currently EXPERIMENTAL. Please use at your own risk. Please make sure you have backups.**
+      **This feature is DANGEROUS. Please use at your own risk. Please make sure you have backups.**
 
 
-      As of v1.23.1, when adding a sync folder, you can use a *Pick External Folder* to sync a folder within another app's sandbox. You can navigate to choose a folder from any app which supports file storage under *On My iPhone* or *On My iPad*. iCloud is not currently supported.
+      As of v1.23.1, when adding a sync folder, you can use *Pick External Folder* to sync a folder from another app's sandbox. You can navigate to choose a folder from any app which supports file storage under *On My iPhone* or *On My iPad*. iCloud is not currently supported.
 
 
       Beware that as you are are modifying files within another app's sandbox, that app may not behave appropriately, and there is a chance data corrupton or data loss can occur.
 
 
-      We have a thread on Github to discuss successes (and failures?) with particular apps: <https://github.com/MobiusSync/MobiusSync/discussions/102>
+      We have a thread on GitHub to discuss successes (and failures?) with particular apps: <https://github.com/MobiusSync/MobiusSync/discussions/102>
   - title: Syncing my photos and videos
     content: >
-      Because iOS manages photos and videos within the Photo Library, they are not accessible to Syncthing to synchronise directly as files.
+      Because iOS manages photos and videos within the Photo Library, they are not accessible to Syncthing to synchronise directly as files. We have been working on custom code to access the iOS Photo Library.
 
 
-      We understand that the ability to synchronise photos and videos captured on your iPhone or iPad to other Syncthing-enabled devices is a highly desirable feature and is planned for the future.
+      Starting with v1.27.9, when adding a sync folder, you can use *Pick Photo Folder* to sync a collection from the iOS Photo Library. Only *Send Only* Folder Type is supported at this stage. Please be aware that deletions on your iOS device will be also applied (i.e. deleted) on other devices. You may wish to consider the *ignoreDelete* advanced folder setting: <https://docs.syncthing.net/advanced/folder-ignoredelete.html>
 
 
-      Two-way sync of photos and videos is even more difficult and is further down the roadmap.
+      You can follow and influence the growing support of Photo Collection sync at: <https://github.com/MobiusSync/MobiusSync/>
   - title: Is Möbius Sync open source?
     content: >
       The Syncthing core of **Möbius Sync** is open source software (OSS), published under MPL-2.0. Accordingly, modifications to Syncthing for **Möbius Sync** under iOS are published under MPL-2.0 at: <https://github.com/MobiusSync/syncthing/>
@@ -133,7 +132,7 @@ accordion:
     content: >
       We know that privacy and security are very important factors in choosing for many. We understand the closed-source nature of parts of **Möbius Sync** compromises this in some regard. To mitigate this:
 
-      - We have retained the full Logging and Debug Facilities of Syncthing so you can see that it's behaviour matches other Syncthing platforms.
+      - We have retained the full Logging and Debug Facilities of Syncthing so you can see that its behaviour matches other Syncthing platforms.
 
       - We have avoided analytics and any connections to third-party services so network auditing can confirm that we are not sending your data elsewhere.
 
@@ -166,22 +165,7 @@ accordion:
     content: Syncthing core contains an optional and anonymous Usage Report. This is currently disabled in **Möbius Sync**, although we may add it in future releases.
   - title: Future plans
     content: >
-      - Usage report (opt-in)
-
-      - Network data/Wifi network usage control
-
-      - Improving background syncing
-
-      - Better integration with Files
-
-      - Selective sync
-
-      - Photo/video library (Send Only)
-
-      - Photo/video library (Send and Receive)
-
-
-      Feedback on what is important to you is most welcome - preferably by comments at <https://github.com/MobiusSync/MobiusSync/issues>.
+      Feedback on what is important to you is most welcome - preferably by comments at <https://github.com/MobiusSync/MobiusSync/labels/enhancement>
   - title: Syncthing features
     content: >
       We have tried to retain and expose via the Settings GUI all of the Syncthing features, except for those we know will not work. This is because we know Syncthing has some very advanced users.
