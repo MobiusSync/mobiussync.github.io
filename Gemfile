@@ -29,7 +29,8 @@ end
 gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 
 # Dependabot security alert fixes
-gem "rexml", ">= 3.2.5"
+# Keep explicit secure floors so future lockfile refreshes cannot regress them.
+gem "rexml", ">= 3.3.9"
 gem "kramdown", ">= 2.3.1"
 
-gem "webrick", "~> 1.8"
+gem "webrick", ">= 1.8.2", "< 2"
